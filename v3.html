@@ -1,20 +1,38 @@
 <!-- TODO List -->
 <!-- Заменить Timelines Google Charts на Timeline Chart AnyChart: https://developers.google.com/chart/interactive/docs/gallery/timeline?hl=ru на https://www.anychart.com/products/anychart/gallery/Timeline_Chart/History_of_Horror.php -->
 
-<!-- Актуально на март 2020 г. -->
+<!-- Актуально на апрель 2020 г. -->
 
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+
     <title>CV Mikhail Shardin</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- Timelines Google Charts -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <style type="text/css">
+        body {
+            font-family: "Merriweather", serif;
+        }
+    </style>
+
+    <!-- Google Charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Timelines Google Charts -->
     <script type="text/javascript">
         google.charts.load('current', {
             'packages': ['timeline']
@@ -43,10 +61,10 @@
                 id: 'End'
             });
             dataTable.addRows([
-                ['Публикации', 'https://habr.com: 10', new Date(2019, 11), new Date()],
-                ['Публикации', 'https://medium.com: 1', new Date(2020, 02), new Date(2020, 2)],
+                ['Публикации', 'https://habr.com: 14', new Date(2019, 11), new Date()],
+                ['Публикации', 'https://github.com: 10', new Date(2019, 09), new Date(2020, 2)],
+                ['Публикации', 'https://medium.com: 1', new Date(2020, 1), new Date(2020, 1)],
                 ['Публикации', 'https://t.me: 4', new Date(2019, 03), new Date(2020, 1)],
-                ['Публикации', 'https://github.com: 6', new Date(2019, 09), new Date(2019, 12)],
                 ['Публикации', 'https://zen.yandex.com: 1', new Date(2019, 12), new Date(2019, 12)],
                 ['Публикации', 'https://vc.com: 1', new Date(2019, 11), new Date(2019, 11)],
                 ['Публикации', 'https://3dtoday.com: 13', new Date(2018, 09), new Date(2018, 11)],
@@ -97,7 +115,6 @@
     </script>
 
     <!-- Timelines Google Charts -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {
             'packages': ['timeline']
@@ -138,7 +155,7 @@
                 ['Инвестиции', 'International Stocks', new Date(2011, 6), new Date()],
                 ['Инвестиции', 'Derivatives', new Date(2006, 6), new Date(2011, 7)],
                 ['Учредитель', 'ООО «Упаковка Пермь», торговля', new Date(2011, 6), new Date(2013, 4)],
-                ['Учредитель', 'ООО «Управление инфраструктурой», недвижимость', new Date(2013, 6), new Date(2020, 1)],
+                ['Учредитель', 'ООО «Управление инфраструктурой», недвижимость', new Date(2013, 6), new Date(2020, 3)],
             ]);
 
             var options = {
@@ -185,10 +202,13 @@
 <body>
     <div class="container mt-3">
         <div id="foto" style="float:right">
-            <img class="rounded-circle img-fluid" width="170" src="https://raw.githubusercontent.com/empenoso/empenoso.github.io/master/20200129-IMG_4602-5342_crop.jpg" />
+            <img class="rounded-circle img-fluid d-none d-md-block" width="170" src="/images/20200129-IMG_4602-5342_crop.jpg" />
         </div>
+
         <h1 style="margin-bottom: 0px;">Шардин Михаил</h1>
+
         <h3><small class="text-muted">Инвестор и разработчик, канд. техн. наук</small></h3>
+
         <p>Проживание: <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/@58.0100442,56.2275679,11z">Россия, Пермь</a><br>
             Возраст: <script type="text/javascript">
                 document.write(calcAge('1984-5'));
@@ -196,20 +216,19 @@
             Контакты: <a class="badge badge-primary" href="tg://resolve?domain=empenoso" role="button">Телеграм</a>,
             <a class="badge badge-info" href="https://www.facebook.com/mikhail.shardin" role="button">Facebook</a>
         </p>
+
         <h5>Профессиональный опыт и образование:</h5>
     </div>
-
     <div class="cover-container">
-        <div id="timeline" style="height: 400px;"></div>
+        <div id="timeline" style="height: 390px;"></div>
     </div>
-
     <div class="container mt-3">
-        <h5> Инвестиционный опыт:</h5>
+
+        <h5 style="margin-top: -40;"> Инвестиционный опыт:</h5>
     </div>
     <div class="cover-container">
         <div id="timeline1" style="height: 380px;"></div>
     </div>
-
 </body>
 
 </html>

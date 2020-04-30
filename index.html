@@ -27,10 +27,23 @@
         body {
             font-family: "Merriweather", serif;
         }
+
+        .temp {
+            display: block !important;
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .collapse,
+        .collapsing {
+            margin-top: 15px;
+        }
     </style>
 
     <!-- Google Charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
     <!-- Timelines Google Charts -->
     <script type="text/javascript">
@@ -110,6 +123,7 @@
                     groupByRowLabel: true
                 }
             };
+
             chart.draw(dataTable);
         }
     </script>
@@ -119,9 +133,9 @@
         google.charts.load('current', {
             'packages': ['timeline']
         });
-        google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(drawChart2);
 
-        function drawChart() {
+        function drawChart2() {
             var container = document.getElementById('timeline1');
             var chart = new google.visualization.Timeline(container);
             var dataTable = new google.visualization.DataTable();
@@ -169,9 +183,32 @@
 
     <!-- Calculate age -->
     <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                $('.collapse').removeClass('temp')
+            }, 300);
+
+            $('.collapse').on('hidden.bs.collapse', function() {
+                $(this).addClass('temp')
+            })
+
+            $('.collapse').on('show.bs.collapse', function() {
+                $(this).removeClass('temp')
+            })
+
+            // addres
+            console.log(window.navigator)
+        });
+
+        window.addEventListener('resize', function() {
+            drawChart();
+            drawChart2();
+        })
+
         function calcAge(dateString) {
-            var birthday = +new Date(dateString);
+            var birthday = new Date(dateString.replace(/-/g, '/'));
             //document.getElementById("age").innerHTML = "Возраст: " + ~~((Date.now() - birthday) / (31557600000)) + " лет";
+
             return ~~((Date.now() - birthday) / (31557600000));
         }
     </script>
@@ -202,32 +239,35 @@
 <body>
     <div class="container mt-3">
         <div id="foto" style="float:right">
-            <img class="rounded-circle img-fluid d-none d-md-block" width="170" src="/images/20200129-IMG_4602-5342_crop.jpg" />
+            <img class="rounded-circle img-fluid d-none d-md-block" width="170" src="./images/20200129-IMG_4602-5342_crop.jpg" />
         </div>
 
         <h1 style="margin-bottom: 0px;">Шардин Михаил</h1>
 
         <h3><small class="text-muted">Инвестор и разработчик, канд. техн. наук</small></h3>
 
-        <p>Проживание: <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/@58.0100442,56.2275679,11z">Россия, Пермь</a><br>
+        <p>Проживание: <a target="_blank" id="#addres" rel="noopener noreferrer" href="https://www.google.com/maps/place/@58.0100442,56.2275679,11z">Россия, Пермь</a><br>
             Возраст: <script type="text/javascript">
-                document.write(calcAge('1984-5'));
+                document.write(calcAge('1984-5-1'));
             </script> лет <br>
             Контакты: <a class="badge badge-primary" href="tg://resolve?domain=empenoso" role="button">Телеграм</a>,
             <a class="badge badge-info" href="https://www.facebook.com/mikhail.shardin" role="button">Facebook</a>
         </p>
 
-        <h5>Профессиональный опыт и образование:</h5>
+        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#timeline" aria-expanded="false" aria-controls="timeline">
+            Профессиональный опыт и образование
+        </button>
     </div>
     <div class="cover-container">
-        <div id="timeline" style="height: 390px;"></div>
+        <div id="timeline" class="collapse temp" style="height: 390px; min-width: 100%;"></div>
     </div>
     <div class="container mt-3">
-
-        <h5 style="margin-top: -40;"> Инвестиционный опыт:</h5>
+        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#timeline1" aria-expanded="false" aria-controls="timeline1">
+            Инвестиционный опыт
+        </button>
     </div>
     <div class="cover-container">
-        <div id="timeline1" style="height: 380px;"></div>
+        <div id="timeline1" class="collapse temp" style="height: 380px; min-width: 100%;"></div>
     </div>
 </body>
 

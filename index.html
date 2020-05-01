@@ -23,33 +23,31 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    
+    <!-- CSS -->
     <style type="text/css">
         body {
             font-family: "Merriweather", serif;
         }
-
         .temp {
             display: block !important;
             position: absolute;
             visibility: hidden;
             width: 100%;
         }
-
         .collapse,
         .collapsing {
             margin-top: 15px;
         }
     </style>
 
-    <!-- Google Charts -->
+    <!-- Google Charts and JS -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
     <script>
         function afterDrawChart(element, resize) {
             element.removeClass('temp').addClass('collapse')
-
             if (!resize) {
                 element.collapse({
                     toggle: false
@@ -221,8 +219,6 @@
         // Calculate age
         function calcAge(dateString) {
             var birthday = new Date(dateString.replace(/-/g, '/'));
-            //document.getElementById("age").innerHTML = "Возраст: " + ~~((Date.now() - birthday) / (31557600000)) + " лет";
-
             return ~~((Date.now() - birthday) / (31557600000));
         }
     </script>

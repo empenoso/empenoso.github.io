@@ -20,9 +20,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <style type="text/css">
@@ -34,6 +32,7 @@
             display: block !important;
             position: absolute;
             visibility: hidden;
+            width: 100%;
         }
 
         .collapse,
@@ -44,6 +43,20 @@
 
     <!-- Google Charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function afterDrawChart(element, resize) {
+            element.removeClass('temp').addClass('collapse')
+
+            if (!resize) {
+                element.collapse({
+                    toggle: false
+                })
+            }
+        }
+    </script>
 
     <!-- Timelines Google Charts -->
     <script type="text/javascript">
@@ -52,10 +65,15 @@
         });
         google.charts.setOnLoadCallback(drawChart);
 
-        function drawChart() {
-            var container = document.getElementById('timeline');
+        function drawChart(resize) {
+            var element = $('#timeline');
+            var container = element[0];
             var chart = new google.visualization.Timeline(container);
             var dataTable = new google.visualization.DataTable();
+
+            google.visualization.events.addListener(chart, 'ready', function() {
+                afterDrawChart(element, resize)
+            });
 
             dataTable.addColumn({
                 type: 'string',
@@ -135,10 +153,15 @@
         });
         google.charts.setOnLoadCallback(drawChart2);
 
-        function drawChart2() {
-            var container = document.getElementById('timeline1');
+        function drawChart2(resize) {
+            var element = $('#timeline1');
+            var container = element[0];
             var chart = new google.visualization.Timeline(container);
             var dataTable = new google.visualization.DataTable();
+
+            google.visualization.events.addListener(chart, 'ready', function() {
+                afterDrawChart(element, resize)
+            });
 
             dataTable.addColumn({
                 type: 'string',
@@ -181,30 +204,21 @@
         }
     </script>
 
-    <!-- Calculate age -->
     <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                $('.collapse').removeClass('temp')
-            }, 300);
-
-            $('.collapse').on('hidden.bs.collapse', function() {
-                $(this).addClass('temp')
-            })
-
-            $('.collapse').on('show.bs.collapse', function() {
-                $(this).removeClass('temp')
-            })
-
-            // addres
-            console.log(window.navigator)
-        });
-
+        // Resize Timelines error 
+        var resizeId;
         window.addEventListener('resize', function() {
-            drawChart();
-            drawChart2();
+            clearTimeout(resizeId);
+            resizeId = setTimeout(doneResizing, 100);
         })
 
+        function doneResizing() {
+            $('.collapse').removeClass('collapse').addClass('temp');
+            drawChart(true);
+            drawChart2(true);
+        }
+
+        // Calculate age
         function calcAge(dateString) {
             var birthday = new Date(dateString.replace(/-/g, '/'));
             //document.getElementById("age").innerHTML = "Возраст: " + ~~((Date.now() - birthday) / (31557600000)) + " лет";
@@ -234,7 +248,6 @@
         <div><img src="https://mc.yandex.ru/watch/60764914" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
-
 </head>
 
 <body>
@@ -260,7 +273,7 @@
         </button>
     </div>
     <div class="cover-container">
-        <div id="timeline" class="collapse temp" style="height: 390px; min-width: 100%;"></div>
+        <div id="timeline" class="temp" style="height: 390px;"></div>
     </div>
     <div class="container mt-3">
         <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#timeline1" aria-expanded="false" aria-controls="timeline1">
@@ -268,7 +281,7 @@
         </button>
     </div>
     <div class="cover-container">
-        <div id="timeline1" class="collapse temp" style="height: 380px; min-width: 100%;"></div>
+        <div id="timeline1" class="temp" style="height: 380px;"></div>
     </div>
 </body>
 

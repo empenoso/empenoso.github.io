@@ -1,8 +1,6 @@
 <!-- TODO List -->
 <!-- Заменить Timelines Google Charts на Timeline Chart AnyChart: https://developers.google.com/chart/interactive/docs/gallery/timeline?hl=ru на https://www.anychart.com/products/anychart/gallery/Timeline_Chart/History_of_Horror.php -->
 
-<!-- Актуально на июнь 2020 г. -->
-
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -19,22 +17,26 @@
     <title>Mikhail Shardin: Investor & Developer. Ph.D.</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+
     <!-- CSS -->
     <style type="text/css">
         body {
             font-family: "Merriweather", serif;
         }
+
         .temp {
             display: block !important;
             position: absolute;
             visibility: hidden;
             width: 100%;
         }
+
         .collapse,
         .collapsing {
             margin-top: 15px;
@@ -69,7 +71,7 @@
             var chart = new google.visualization.Timeline(container);
             var dataTable = new google.visualization.DataTable();
 
-            google.visualization.events.addListener(chart, 'ready', function() {
+            google.visualization.events.addListener(chart, 'ready', function () {
                 afterDrawChart(element, resize)
             });
 
@@ -90,48 +92,72 @@
                 id: 'End'
             });
             dataTable.addRows([
-                ['Публикации', 'https://habr.com: 16 шт.', new Date(2019, 11), new Date()],
-		['Публикации', 'https://journal.tinkoff.ru: 1 шт.', new Date(2020, 3), new Date(2020, 4)],
-                ['Публикации', 'https://github.com: 10 шт.', new Date(2019, 9), new Date(2020, 2)],
-                ['Публикации', 'https://medium.com: 1 шт.', new Date(2020, 0), new Date(2020, 1)],
-                ['Публикации', 'https://t.me: 4 шт.', new Date(2019, 3), new Date(2020, 1)],
-                ['Публикации', 'https://zen.yandex.com: 1 шт.', new Date(2019, 11), new Date(2020, 0)],
-                ['Публикации', 'https://vc.com: 1 шт.', new Date(2019, 10), new Date(2019, 11)],
-                ['Публикации', 'https://3dtoday.com: 13 шт.', new Date(2018, 09), new Date(2018, 11)],
-                ['Публикации', 'Журнал Инновации и инвестиции: 2 шт.', new Date(2018, 4), new Date(2018, 5)],
-                ['Публикации', 'Сборник ПНИПУ: 7 шт.', new Date(2012, 4), new Date(2017, 5)],
-                ['Публикации', 'https://z-wave.ru: 16 шт.', new Date(2014, 11), new Date(2015, 4)],
-                ['Публикации', 'https://special.habrahabr.com: 1 шт.', new Date(2015, 4), new Date(2015, 5)],
-                ['Публикации', 'Учебно, методическое пособие для студентов: 1 шт.', new Date(2013, 6), new Date(2013, 7)],
-                ['Публикации', 'Патент: 1 шт.', new Date(2011, 6), new Date(2011, 7)],
-                ['Публикации', 'Журнал Строительные и дорожные машины: 1 шт.', new Date(2011, 6), new Date(2011, 7)],
-                ['Публикации', 'Журнал Механизация строительства: 1 шт.', new Date(2011, 5), new Date(2011, 6)],
-                ['Публикации', 'Сборник ПГТУ: 12 шт.', new Date(2006, 4), new Date(2011, 5)],
-                ['Публикации', 'Сборник СибАДИ: 5 шт.', new Date(2006, 5), new Date(2010, 6)],
-                ['Публикации', 'Учебное пособие для студентов: 1 шт.', new Date(2007, 10), new Date(2007, 11)],
-                ['Публикации', 'Газета За рулем ,  регион. Пермский край: 38 шт.', new Date(2004, 6), new Date(2006, 7)],
-                ['Публикации', 'Журнал Мир Дорог: 1 шт.', new Date(2006, 5), new Date(2006, 6)],
-                ['Публикации', 'Журнал АЗС: 6 шт.', new Date(2003, 11), new Date(2006, 4)],
-                ['Публикации', 'Журнал Фаворит дороги: 1 шт.', new Date(2005, 9), new Date(2005, 10)],
-                ['Публикации', 'Журнал Домашний компьютер: 2 шт.', new Date(2004, 6), new Date(2005, 4)],
-                ['Публикации', 'Компьютерный еженедельник Компьютерра: 1 шт.', new Date(2004, 3), new Date(2004, 5)],
+                // Начало вставки из сгенерированного файла
+                ["Публикации", "https://habr.com: 19 шт.", new Date(2019, 10), new Date(2020, 06)],
+                ["Публикации", "https://journal.tinkoff.ru: 1 шт.", new Date(2020, 3), new Date(2020, 04)],
+                ["Публикации", "https://github.com: 10 шт.", new Date(2019, 8), new Date(2020, 03)],
+                ["Публикации", "https://medium.com: 1 шт.", new Date(2020, 1), new Date(2020, 02)],
+                ["Публикации", "https://t.me: 4 шт.", new Date(2019, 2), new Date(2020, 01)],
+                ["Публикации", "https://zen.yandex.ru: 1 шт.", new Date(2019, 11), new Date(2019, 12)],
+                ["Публикации", "https://vc.ru: 1 шт.", new Date(2019, 10), new Date(2019, 11)],
+                ["Публикации", "https://3dtoday.ru: 13 шт.", new Date(2018, 8), new Date(2018, 11)],
+                ["Публикации", "Журнал Инновации и инвестиции: 2 шт.", new Date(2018, 3), new Date(2018, 05)],
+                ["Публикации", "Сборник ПНИПУ: 7 шт.", new Date(2012, 3), new Date(2017, 05)],
+                ["Публикации", "https://z-wave.ru: 16 шт.", new Date(2014, 10), new Date(2015, 04)],
+                ["Публикации", "https://special.habrahabr.ru: 1 шт.", new Date(2015, 3), new Date(2015, 04)],
+                ["Публикации", "Учебно-методическое пособие для студентов: 1 шт.", new Date(2013, 5), new Date(
+                    2013, 06)],
+                ["Публикации", "Патент: 1 шт.", new Date(2011, 5), new Date(2011, 06)],
+                ["Публикации", "Журнал Строительные и дорожные машины: 1 шт.", new Date(2011, 5), new Date(2011,
+                    06)],
+                ["Публикации", "Журнал Механизация строительства: 1 шт.", new Date(2011, 4), new Date(2011,
+                    05)],
+                ["Публикации", "Сборник ПГТУ: 12 шт.", new Date(2006, 3), new Date(2011, 05)],
+                ["Публикации", "Сборник СибАДИ: 5 шт.", new Date(2006, 4), new Date(2010, 05)],
+                ["Публикации", "Учебное пособие для студентов: 1 шт.", new Date(2007, 9), new Date(2007, 10)],
+                ["Публикации", "Газета За рулем - регион. Пермский край: 38 шт.", new Date(2004, 5), new Date(
+                    2006, 06)],
+                ["Публикации", "Журнал Мир Дорог: 1 шт.", new Date(2006, 4), new Date(2006, 05)],
+                ["Публикации", "Журнал АЗС: 6 шт.", new Date(2003, 11), new Date(2006, 03)],
+                ["Публикации", "Журнал Фаворит дороги: 1 шт.", new Date(2005, 8), new Date(2005, 09)],
+                ["Публикации", "Журнал Домашний компьютер: 2 шт.", new Date(2004, 5), new Date(2005, 05)],
+                ["Публикации", "http://old.computerra.ru: 1 шт.", new Date(2004, 2), new Date(2004, 03)],
+                ["Публикации", "Компьютерный еженедельник Компьютерра: 1 шт.", new Date(2004, 2), new Date(2004,
+                    03)],
+                // Выборка сгенерирована 2020-7-12 10:57:44 
 
                 ['Работа', 'ООО «ЦПО «Формула безопасности», образование', new Date(2019, 3), new Date()],
-                ['Работа', 'Пермский национальный исследовательский политехнический университет, образование', new Date(2003, 9), new Date(2019, 9)],
-                ['Работа', 'ООО «Сатурн-Р» (отдел), ООО «Сатурн-Р Интернет», ЗАО «ПермИнтел», ООО «Сатурн-Интернет», ООО «Теле-Инвест», ООО «Перм.ру», операторы связи', new Date(2003, 3), new Date(2017, 8)],
+                ['Работа', 'Пермский национальный исследовательский политехнический университет, образование',
+                    new Date(2003, 9), new Date(2019, 9)
+                ],
+                ['Работа',
+                    'ООО «Сатурн-Р» (отдел), ООО «Сатурн-Р Интернет», ЗАО «ПермИнтел», ООО «Сатурн-Интернет», ООО «Теле-Инвест», ООО «Перм.ру», операторы связи',
+                    new Date(2003, 3), new Date(2017, 8)
+                ],
                 ['Работа', 'АО «Эр-Телеком Холдинг», оператор связи', new Date(2017, 8), new Date(2018, 2)],
                 ['Работа', 'ООО «Лиера», картография', new Date(2005, 11), new Date(2013, 11)],
                 ['Работа', 'ЗАО «Каскад», строительство', new Date(2007, 04), new Date(2008, 1)],
-                ['Работа', 'ПООО «Федерация автомобильного спорта Прикамья», ОО ПК «Ассоциация картинга Прикамья», спорт.клубы', new Date(2007, 7), new Date(2012, 12)],
-                ['Работа', 'НП «Пермский внедорожный клуб», спорт.клубы', new Date(2003, 11), new Date(2007, 3)],
+                ['Работа',
+                    'ПООО «Федерация автомобильного спорта Прикамья», ОО ПК «Ассоциация картинга Прикамья», спорт.клубы',
+                    new Date(2007, 7), new Date(2012, 12)
+                ],
+                ['Работа', 'НП «Пермский внедорожный клуб», спорт.клубы', new Date(2003, 11), new Date(2007,
+                    3)],
 
-                ['Образование', 'Пермский Государственный Технический Университет (ПГТУ), квалификация «инженер»', new Date(2001, 8), new Date(2006, 6)],
+                ['Образование',
+                    'Пермский Государственный Технический Университет (ПГТУ), квалификация «инженер»', new Date(
+                        2001, 8), new Date(2006, 6)
+                ],
                 ['Образование', 'ООО «ИК Витус», финансовые рынки', new Date(2006, 6), new Date(2006, 7)],
-                ['Образование', 'Сибирский государственный автомобильно-дорожный университет (СибАДИ), аспирантура', new Date(2007, 6), new Date(2010, 5)],
+                ['Образование',
+                    'Сибирский государственный автомобильно-дорожный университет (СибАДИ), аспирантура',
+                    new Date(2007, 6), new Date(2010, 5)
+                ],
                 //['Образование', 'ЗАО «Финам в Перми»', new Date(2008, 6), new Date(2008, 7)],
                 ['Образование', 'Cтепень кандидата технических наук', new Date(2013, 3), new Date(2013, 4)],
                 ['Образование', 'EC Malta, General English', new Date(2015, 5), new Date(2015, 6)],
-                ['Образование', 'Cambridge Preliminary English Test (PET)', new Date(2017, 6), new Date(2017, 7)],
+                ['Образование', 'Cambridge Preliminary English Test (PET)', new Date(2017, 6), new Date(2017,
+                    7)],
                 ['Образование', 'ЧОУ «Межотраслевой институт»', new Date(2019, 9), new Date(2019, 11)],
             ]);
 
@@ -158,7 +184,7 @@
             var chart = new google.visualization.Timeline(container);
             var dataTable = new google.visualization.DataTable();
 
-            google.visualization.events.addListener(chart, 'ready', function() {
+            google.visualization.events.addListener(chart, 'ready', function () {
                 afterDrawChart(element, resize)
             });
 
@@ -191,7 +217,8 @@
                 ['Инвестиции', 'International Stocks', new Date(2011, 6), new Date()],
                 ['Инвестиции', 'Derivatives', new Date(2006, 6), new Date(2011, 7)],
                 ['Учредитель', 'ООО «Упаковка Пермь», торговля', new Date(2011, 6), new Date(2013, 4)],
-                ['Учредитель', 'ООО «Управление инфраструктурой», недвижимость', new Date(2013, 6), new Date(2020, 6)],
+                ['Учредитель', 'ООО «Управление инфраструктурой», недвижимость', new Date(2013, 6), new Date(
+                    2020, 6)],
             ]);
 
             var options = {
@@ -206,7 +233,7 @@
     <script type="text/javascript">
         // Resize Timelines error 
         var resizeId;
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
             clearTimeout(resizeId);
             resizeId = setTimeout(doneResizing, 100);
         })
@@ -226,12 +253,13 @@
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function(m, e, t, r, i, k, a) {
-            m[i] = m[i] || function() {
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
                 (m[i].a = m[i].a || []).push(arguments)
             };
             m[i].l = 1 * new Date();
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
+                .insertBefore(k, a)
         })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
@@ -250,22 +278,25 @@
 <body>
     <div class="container mt-3">
         <div id="foto" style="float:right">
-            <img class="rounded-circle img-fluid d-none d-md-block" width="170" src="./images/20200129-IMG_4602-5342_crop.jpg" />
+            <img class="rounded-circle img-fluid d-none d-md-block" width="170"
+                src="./images/20200129-IMG_4602-5342_crop.jpg" />
         </div>
 
         <h1 style="margin-bottom: 0px;">Михаил Шардин</h1>
 
         <h3><small class="text-muted">Инвестор и разработчик, канд. техн. наук</small></h3>
 
-        <p>Проживание: <a target="_blank" id="#addres" rel="noopener noreferrer" href="https://www.google.com/maps/place/@58.0100442,56.2275679,11z">Россия, Пермь</a><br>
+        <p>Проживание: <a target="_blank" id="#addres" rel="noopener noreferrer"
+                href="https://www.google.com/maps/place/@58.0100442,56.2275679,11z">Россия, Пермь</a><br>
             Возраст: <script type="text/javascript">
                 document.write(calcAge('1984-5-1'));
             </script> лет <br>
             Контакты: <a class="badge badge-primary" href="tg://resolve?domain=empenoso" role="button">Телеграм</a>,
             <a class="badge badge-info" href="https://www.facebook.com/mikhail.shardin" role="button">Facebook</a>
         </p>
-
-        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#timeline" aria-expanded="false" aria-controls="timeline">
+        <!-- Профессиональный опыт и образование -->
+        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#timeline"
+            aria-expanded="false" aria-controls="timeline">
             Профессиональный опыт и образование
         </button>
     </div>
@@ -273,12 +304,406 @@
         <div id="timeline" class="temp" style="height: 390px;"></div>
     </div>
     <div class="container mt-3">
-        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#timeline1" aria-expanded="false" aria-controls="timeline1">
+        <!-- / Профессиональный опыт и образование -->
+        <!-- Публикации -->
+        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#publications"
+            aria-expanded="false" aria-controls="publications">
+            Публикации
+        </button>
+        <div class="collapse" id="publications">
+            <!-- Начало вставки из сгенерированного файла -->
+            <ol>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-06-22_habr-com_SilverFir.pdf">Скрипт выборки российских облигаций по
+                        параметрам | Хабр</a> от 22.06.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-06-15_habr-com_Умный дом.pdf">Умная хрущёвка на максималках. Продолжение |
+                        Хабр</a> от 15.06.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2020-06-08_habr-com_API.pdf">Все
+                        финансовые рынки мира в API Яху Финанс | Хабр</a> от 08.06.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-06-01_habr-com_Умный дом.pdf">Умная хрущёвка на максималках | Хабр</a> от
+                    01.06.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2020-04-21_habr-com_API.pdf">Free API
+                        Мосбиржи в формулах Microsoft Excel | Хабр</a> от 21.04.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-04-16_journal-tinkoff-ru_SilverFir.pdf">Как я создал собственную
+                        гугл-таблицу для учета капитала | Т—Ж</a> от 16.04.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-04-03_habr-com_JavaScript.pdf">Пишем генератор рандомных акций Мосбиржи на
+                        JavaScript | Хабр</a> от 03.04.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2020-04-02_habr-com_Новости.pdf">5G
+                        Linux смартфон в форм-факторе миниатюрного ноутбука собрал средства
+                        через краундфандинг | Хабр</a> от 02.04.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-03-30_habr-com_Linux.pdf">Установка Ubuntu на Microsoft Surface Pro |
+                        Хабр</a> от 30.03.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-03-27_github-com_SilverFir.pdf">SilverFir: Investment Report
+                        Инвестиционный отчёт в гугл доках, куда можно добавить любой актив и
+                        скачивать цены автоматически | GitHub </a> от 27.03.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-03-10_habr-com_Умный дом.pdf">Полная домашняя автоматизация в новостройке.
+                        Продолжение | Хабр</a> от 10.03.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-03-09_github-com_JavaScript.pdf">Picks a random stock from the 200+
+                        stocks on the MOEX | GitHub </a> от 09.03.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-02-25_habr-com_Умный дом.pdf">Полная домашняя автоматизация в новостройке
+                        | Хабр</a> от 25.02.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-02-18_github-com_Умный дом.pdf">My Home Assistant Configuration / Полная
+                        домашняя автоматизация в новостройке c помощью
+                        MegaD-2561 и Sonoff | GitHub </a> от 18.02.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-02-17_github-com_Умный дом.pdf">Автоматизация однокомнатной
+                        квартиры c openHAB | GitHub </a> от 17.02.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2020-02-07_medium-com_API.pdf">What
+                        does Free API of the Moscow Stock Exchange Show Investors in Google
+                        Sheets? | Medium</a> от 07.02.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2020-02-06_habr-com_API.pdf">Free API
+                        Moscow Stock Exchange (MOEX) in Google Sheets | Habr</a> от 06.02.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2020-02-04_habr-com_API.pdf">Что
+                        делает Free API Московской биржи в Google Таблицах | Хабр</a> от 04.02.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2020-01-30_habr-com_Умный дом.pdf">Как
+                        я 1000 дней пользовался OpenHAB, а затем перешел на Home Assistant | Хабр</a> от 30.01.2020.
+                </li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-01-29_t-me_Гугл Таблицы.pdf">Достаём просмотры и лайки статей прямо из
+                        веб-страниц. Волшебство =IMPORTXML | Google Таблицы</a> от 29.01.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-01-27_habr-com_Гугл Таблицы.pdf">Учёт собственных публикаций | Хабр</a> от
+                    27.01.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2020-01-04_habr-com_Умный дом.pdf">Мои
+                        поиски физической панели управления умным домом | Хабр</a> от 04.01.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-12-25_habr-com_Гугл скрипты.pdf">Дни рождения в Google Календаре с
+                        обозначением возраста | Хабр</a> от 25.12.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-12-23_habr-com_Умный дом.pdf">Красочные адресные светодиоды на новый год
+                        без программирования и пайки | Хабр</a> от 23.12.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-12-19_zen-yandex-ru_SilverFir.pdf">Google-таблица поможет подсчитать ваши
+                        финансовые активы | Михаил Шардин
+                        | Яндекс Дзен</a> от 19.12.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-12-18_github-com_Умный дом.pdf">Low price of Christmas Lights automation /
+                        Новогодняя иллюминация | GitHub</a> от 18.12.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-12-17_habr-com_Умный дом.pdf">Управляем дюймовыми жалюзи дешево | Хабр</a>
+                    от 17.12.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-12-07_github-com_Умный дом.pdf">Low price automation of blinds /
+                        Автоматизация дешевых жалюзи | GitHub </a> от 07.12.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-11-28_habr-com_SilverFir.pdf">Практические аспекты ранней пенсии FIRE
+                        movement в России | Хабр</a> от 28.11.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2019-11-20_t-me_SilverFir.pdf">Таблица
+                        для учета своих активов и статья | Google Таблицы</a> от 20.11.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-11-18_vc-ru_SilverFir.pdf">Управленческий учет личных активов | Финансы на
+                        vc.ru</a> от 18.11.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-11-11_t-me_Гугл скрипты.pdf">Скрипт для работы с Google Календарем.
+                        Напоминалка про дни рождения | Google Таблицы</a> от 11.11.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-11-07_github-com_Умный дом.pdf">Old speakers + Raspberry Pi / Старые
+                        колонки + выход аналогового звука на Малине Pi | GitHub </a> от 07.11.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-10-18_github-com_Гугл скрипты.pdf">My Google Apps Script Мои гугл скрипты
+                        | GitHub </a> от 18.10.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-09-06_github-com_Умный дом.pdf">My Home Assistant Configuration / Полная
+                        автоматизация двухкомнатной квартиры c помощью
+                        MegaD-2561, Sonoff и Electrodragon | GitHub </a> от 06.09.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-09-05_github-com_Умный дом.pdf">Автоматизация квартиры c openHAB | GitHub
+                    </a> от 05.09.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2019-03-25_t-me_Гугл скрипты.pdf">Изменяем Google Calendar с помощью скриптов |
+                        Google Таблицы</a> от 25.03.2019.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2018-11-10_3dtoday-ru_PICASO.pdf">Сборная солянка на Tevo Tornado | 3Dtoday
+                    </a> от 10.11.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2018-11-09_3dtoday-ru_PICASO.pdf">Большой кораблик на Tevo Tornado | 3Dtoday
+                    </a> от 09.11.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2018-11-08_3dtoday-ru_PICASO.pdf">PICASO 3D: заключительный аккорд | 3Dtoday
+                    </a> от 08.11.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2018-11-07_3dtoday-ru_PICASO.pdf">PICASO 3D: забыть как страшный сон | 3Dtoday
+                    </a> от 07.11.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2018-10-03_3dtoday-ru_PICASO.pdf">Мой
+                        опыт с PICASO. Суровые будни. Виню себя | 3Dtoday </a> от 03.10.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2018-09-29_3dtoday-ru_PICASO.pdf">Гай
+                        Юлий Цезарь. Сэкономил $30.00 | 3Dtoday </a> от 29.09.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2018-09-28_3dtoday-ru_PICASO.pdf">PICASO Designer X PRO и REC PLA | 3Dtoday
+                    </a> от 28.09.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2018-09-27_3dtoday-ru_PICASO.pdf">Тесты PICASO Designer X PRO после сервисного
+                        центра топ 3д шоп | 3Dtoday</a> от 27.09.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2018-09-21_3dtoday-ru_PICASO.pdf">Это
+                        бизнес, детка! Но я просто хотел печатать... | 3Dtoday </a> от 21.09.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer" href="./articles/2018-09-20_3dtoday-ru_PICASO.pdf">REC,
+                        PICASO и Top 3D Shop просто делают свою работу - как я оказался на
+                        обочине жизни | 3Dtoday </a> от 20.09.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2018-09-19_3dtoday-ru_PICASO.pdf">Личный опыт с PICASO Designer X PRO. Часть 3.
+                        Новый виток проблем | 3Dtoday </a> от 19.09.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2018-09-18_3dtoday-ru_PICASO.pdf">PICASO Designer X PRO сломался при первой
+                        печати | 3Dtoday </a> от 18.09.2018.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2018-09-16_3dtoday-ru_PICASO.pdf">Личный опыт с PICASO Designer X PRO. Часть 1.
+                        Покупка | 3Dtoday </a> от 16.09.2018.</li>
+                <li>Зависимость плотности отформованных образцов асфальтобетонной смеси от конфигурации виброформующей
+                    поверхности, стр. 285-288 в Журнал Инновации и инвестиции, ISSN-2307-180X, №5 2018 года от
+                    24.05.2018.</li>
+                <li>Навесное рабочее оборудование для
+                    изготовления водоотводных лотков из асфальтобетона, стр. 352-356 в Журнал Инновации и инвестиции,
+                    ISSN-2307-180X, №4 2018 года от 24.04.2018.</li>
+                <li>Оснащение колесного трактора МТЗ-80 щеточным оборудованием с системой обеспыливания, стр. 8-10 в
+                    Сборник ПНИПУ. Модернизация и научные исследования в транспортном комплексе. 2017. Т. 1. от
+                    17.05.2017.</li>
+                <li>Определение дыхательной активности компонентов твердого топлива из ТКО в Сборник ПНИПУ. Экология и
+                    научно-технический прогресс. Урбанистика: материалы ХIII Всерос. науч.-практ. конф. студентов,
+                    аспирантов и молодых ученых (с междунар. участием), г. Пермь 20 нояб. 2015 г. г. Пермь, 20 ноября
+                    2015 г. /Пермь : Изд-во ПНИПУ, 2016. от 24.04.2016.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-04-29_z-wave-ru_Умный дом.pdf">Как избавиться от несуществующих или
+                        неактуальных устройств
+                        в интерфейсе VeraEdge/VeraLite/Vera3? | Z-Wave Russia</a> от 29.04.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-04-15_z-wave-ru_Умный дом.pdf">Отслеживание человека при помощи домашнего
+                        роутера MikroTik | Z-Wave Russia</a> от 15.04.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-04-15_special-habrahabr-ru_Умный дом.pdf">Gulfstream</a> от 15.04.2015.
+                </li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-02-25_z-wave-ru_Умный дом.pdf">Личный опыт перехода с VeraLite на
+                        VeraEdge. Перенос устройств | Z-Wave Russia</a> от 25.02.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-02-25_z-wave-ru_Умный дом.pdf">Отслеживание присутствия людей через
+                        домашний роутер | Z-Wave Russia</a> от 25.02.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-02-11_z-wave-ru_Умный дом.pdf">Обзор контроллера домашней автоматизации
+                        VeraEdge | Z-Wave Russia</a> от 11.02.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-01-26_z-wave-ru_Умный дом.pdf">Практический опыт работы с Aeon Labs
+                        MultiSensor | Z-Wave Russia</a> от 26.01.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-01-19_z-wave-ru_Умный дом.pdf">Бортовой самописец вашего дома на базе
+                        VeraLite / Vera3 | Z-Wave Russia</a> от 19.01.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-01-16_z-wave-ru_Умный дом.pdf">Приумножение данных в UI5 Vera | Z-Wave
+                        Russia</a> от 16.01.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-01-15_z-wave-ru_Умный дом.pdf">Люди в доме – простые способы определения
+                        присутствия | Z-Wave Russia</a> от 15.01.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-01-14_z-wave-ru_Умный дом.pdf">Предоставьте волю случаю, или цвет живет
+                        своей жизнью | Z-Wave Russia</a> от 14.01.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-01-13_z-wave-ru_Умный дом.pdf">Управление светом в детской – комфортное
+                        засыпание с Vera | Z-Wave Russia</a> от 13.01.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2015-01-06_z-wave-ru_Умный дом.pdf">Создание простых и понятных уведомлений в
+                        UI5 Vera | Z-Wave Russia</a> от 06.01.2015.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2014-12-24_z-wave-ru_Умный дом.pdf">Ёлочка гори! Автоматизируем Новый год в
+                        VeraLite | Z-Wave Russia</a> от 24.12.2014.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2014-12-17_z-wave-ru_Умный дом.pdf">Достоверная погода в доме, управляемом
+                        VeraLite | Z-Wave Russia</a> от 17.12.2014.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2014-12-10_z-wave-ru_Умный дом.pdf">Бесплатная погода в доме, управляемом
+                        VeraLite | Z-Wave Russia</a> от 10.12.2014.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2014-11-26_z-wave-ru_Умный дом.pdf">Создание домашнего кинотеатра из телевизора
+                        и системы умного дома Z-Wave | Z-Wave Russia</a> от 26.11.2014.</li>
+                <li>Прогнозирование параметров формователя водоотводных лотков из асфальтобетона в Сборник ПНИПУ.
+                    Транспорт. Транспортные сооружения. Экология - 2014. - № 4. от 24.04.2014.</li>
+                <li>Машины ударного действия для измельчения каменных материалов в Учебно-методическое пособие для
+                    студентов, обучающихся по направлению подготовки 190600.62 «Эксплуатация транспортно-технологических
+                    машин и комплексов», издательство ПНИПУ, 2013 от 20.06.2013.</li>
+                <li>Виброуплотнение прикромочных водоотводных лотков из асфальтобетона за один рабочий проход в Сборник
+                    ПНИПУ. Вестник ПГТУ № 3 «Охрана окружающей среды, транспорт, безопасность жизнедеятельности» / г.
+                    Пермь, ПНИПУ, 2013 от 16.05.2013.</li>
+                <li>Прогнозирование параметров виброуплотнителя асфальтобетонных водоотводных лотков в Сборник ПНИПУ.
+                    Модернизация и научные исследования в транспортном комплексе: материалы междунар. науч.-практ.
+                    конф., г. Пермь, 24-25 апреля 2014 г. / М-во образования и науки Рос. Федерации, Рос. акад.
+                    транспорта, Перм. нац. исслед. политехн. ун-т. - Пермь : Изд-во ПНИПУ, 2014. от 24.04.2013.</li>
+                <li>О применении на гидравлическом экскаваторе ковша с активными зубьями в Сборник ПНИПУ. Модернизация и
+                    научные исследования в транспортном комплексе. Материалы международной научно-практической
+                    конференции / г. Пермь, 2013 г. от 19.04.2013.</li>
+                <li>Влияние формы виброформующей поверхности на плотнотность смеси при изготовлении лотков из
+                    асфальтобетона в Сборник ПНИПУ. Вестник ПГТУ № 2 «Охрана окружающей среды, транспорт, безопасность
+                    жизнедеятельности» / г. Пермь, ПНИПУ, 2012 от 19.04.2012.</li>
+                <li>Патент на полезную модель № 105741 «Устройство для формирования модельных образцов асфальтобетонной
+                    смеси» в Патент. Приоритет полезной модели 20 января 2011 г. Зарегистрировано в Государственном
+                    реестре полезных моделей Российской Федерации 20 июня 2011 г. от 20.06.2011.</li>
+                <li>Обоснование скоростного режима виброформователя прикромочных водоотводных лотков в Ежемесячный
+                    научно-технический и производственный журнал. Входит в перечень рецензируемых журналов
+                    рекомендованных ВАК РФ. Журнал Строительные и дорожные машины № 6/2011. Издается с 1956 года.
+                    Москва, издательство «СДМ-Пресс» от 16.06.2011.</li>
+                <li>Определение оптимальной скорости движения виброформующего оборудования прикромочных водоотводных
+                    лотков из асфальтобетона в Сборник ПГТУ. Вестник ПГТУ № 1 «Охрана окружающей среды, транспорт,
+                    безопасность жизнедеятельности» / г. Пермь, ПГТУ, 2011 от 15.05.2011.</li>
+                <li>Определение параметров процесса виброуплотнения прикромочных водоотводных лотков из асфальтобетона в
+                    Всероссийский ежемесячный научно-технический и производственный журнал перечня ВАК Журнал
+                    Механизация строительства № 5 (803) 2011. Издается с 1939 года. Москва, издательство «Креативная
+                    экономика» от 15.05.2011.</li>
+                <li>Система измерений и контроля экспериментальной установки по исследованию виброактивного способа
+                    изготовления приеромочных водоотводных лотков из асфальтобетона в Сборник ПГТУ. Инновации в
+                    транспортном комплексе. Безопасность движения. Охрана окружающей среды» / Материалы международной
+                    научно-практической конференции, посвященной 65-летию Победы советского народа в Великой
+                    Отечественной войне / г. Пермь, ПГТУ, 2010 от 15.10.2010.</li>
+                <li>Система измерений и контроля экспериментальной установки по исследованию виброактивного способа
+                    изготовления приеромочных водоотводных лотков из асфальтобетона в Сборник ПГТУ. Инновации в
+                    транспортном комплексе. Безопасность движения. Охрана окружающей среды / Материалы международной
+                    научно-практической конференции, посвященной 65-летию Победы советского народа в Великой
+                    Отечественной войне / г. Пермь, ПГТУ, 2010 от 15.10.2010.</li>
+                <li>Механизация процесса изготовления прикромочных водоотводных лотков из асфальтобетона в Сборник
+                    СибАДИ. Развитие дорожно-транспортного комплекса и строительной инфраструктуры на основе
+                    рационального природопользования / Материалы V Всероссийской научно-практической конференции
+                    студентов, аспирантов и молодых ученых / Омск, СибАДИ, 2010 от 15.05.2010.</li>
+                <li>Применение виброактивного оборудования при изготовлении прикромочных водоотводных лотков из
+                    асфальтобетона в Сборник ПГТУ. Вестник ПГТУ № 1 «Охрана окружающей среды, транспорт, безопасность
+                    жизнедеятельности» / г. Пермь, ПГТУ, 2010 от 15.05.2010.</li>
+                <li>Экспериментальная установка со сменными вибрационными формообразующими элементами для исследования
+                    процесса изготовления прикромочных водоотводных лотков из асфальтобетона в Сборник ПГТУ. Состояние и
+                    перспективы транспорта. Обеспечение безопасности дорожного движения / Материалы международной
+                    научно-технической конференции / г. Пермь, ПГТУ, 2009 от 15.04.2009.</li>
+                <li>Экспериментальная установка для исследования процесса изготовления прикромочных водоотводных лотков
+                    из асфальтобетона в Сборник СибАДИ. Развитие комплекса и строительной инфраструктуры на основе
+                    рационального природопользования / Материалы III Всероссийской научно-практической конференции
+                    студентов, аспирантов и молодых ученых / Омск, СибАДИ, 2008. от 29.05.2008.</li>
+                <li>Повышение экологической безопасности автомобильной дороги за счет изготовления прикромочных
+                    водоотводных лотков из асфальтобетона в Сборник ПГТУ. Экология и научно-технический прогресс /
+                    Материалы VII международной научно-практической конференции студентов, аспиратнов и молодых ученых /
+                    Пермь, ПГТУ, 2008 от 29.05.2008.</li>
+                <li>Экспериментальная установка с формующей виброплитой для исследования процесса изготовления
+                    прикромочных водоотводных лотков из асфальтобетона в Сборник ПГТУ. Актуальные проблемы
+                    транспортно-дорожного комплекса. Охрана окружающей среды / Молодежная секция сборника научных трудов
+                    / Пермь, ПГТУ, 2008 от 29.05.2008.</li>
+                <li>Самоходный агрегат для изготовления прикромочных водоотводных лотков из асфальтобетона в Сборник
+                    ПГТУ. Современное состояние и инновации транспортного комплекса / Материалы международной
+                    научно-технической конференции / г. Пермь, ПГТУ, 2008 от 14.05.2008.</li>
+                <li>Инновационные технологии при изготовлении прикромочных водоотводных лотков в Сборник СибАДИ.
+                    Межвузовский сборник трудов молодых ученых, аспирантов и студентов. Выпуск 5 / Омск, СибАДИ, 2008.
+                    от 26.04.2008.</li>
+                <li>Энерго- и ресурсосберегающие технологии изготовления прикромочных водоотводных лотков в Сборник
+                    ПГТУ. Перспективы развития инноваций в энергоресурсосбережении / Материалы всероссийской
+                    научно-практической конференции с международным участием / Пермь, ПГТУ, 2007 от 18.10.2007.</li>
+                <li>«Технология машиностроения, производство и ремонт подъемно-транспортных, строительных и дорожных
+                    машин» в Учебное пособие для студентов специальности 190205 (170900) «Подъемно-транспортные,
+                    строительные, дорожные машины и оборудование». Пермь, издательство Пермского государственного
+                    технического университета, 2007 от 18.10.2007.</li>
+                <li>О возможности создания средств механизации для изготовления прикромочных водоотводных лотков из
+                    асфальтобетона в Сборник ПГТУ. Автотранспортный комплекс – проблемы и перспективы, экологическая
+                    безопасность / Материалы всероссийской научно-технической конференции / Пермь, ПГТУ, 2007. от
+                    26.04.2007.</li>
+                <li>Механизация работ при организации отвода воды с полотна автомобильной дороги в Сборник ПГТУ.
+                    Экология и научно-технический прогресс / Материалы шестой международной научно-практической
+                    конференции студентов, аспиратнов и молодых ученых / Пермь, ПГТУ, 2007 от 11.04.2007.</li>
+                <li>О возможности создания средств механизации для изготовления прикромочных водоотводных лотков из
+                    асфальтобетона в Сборник СибАДИ. Развитие комплекса и строительной инфраструктуры на основе
+                    рационального природопользования / Материалы II Всероссийской научно-практической конференции
+                    студентов, аспирантов и молодых ученых / Омск, СибАДИ, 2007. от 14.03.2007.</li>
+                <li>Орда любителей бездорожья. Стр. 58 в Газета За рулем - регион. Пермский край № 13(116) от
+                    27.06.2006.</li>
+                <li>Шоу удалось. Стр. 4 в Газета За рулем - регион. Пермский край № 13(116) от 27.06.2006.</li>
+                <li>Агенты выходят на улицы. Стр. 6 в Газета За рулем - регион. Пермский край № 13(116) от 27.06.2006.
+                </li>
+                <li>Уральский джип-фестиваль-2006. Стр. 57 в Газета За рулем - регион. Пермский край № 11(114) от
+                    30.05.2006.</li>
+                <li>Пермский период-2. Стр. 56 в Газета За рулем - регион. Пермский край № 11(114) от 30.05.2006.</li>
+                <li>Навесное вибровальцовое устройство для сооружения прикромочных водоотводных лотков из асфальтобетона
+                    в Сборник СибАДИ. Проблемы проектирования, строительства и эксплуатации транспортных сооружений /
+                    Материалы I Всероссийской научно-практической конференции студентов, аспирантов и молодых ученых /
+                    Омск, СибАДИ, 2006. от 26.05.2006.</li>
+                <li>Навесные виброактивные устройства для сооружения прикромочных водоотводных лотков из асфальтобетона
+                    в Журнал Мир Дорог № 22 (май 2006 г.) от 26.05.2006.</li>
+                <li>Навесное вибровальцовое устройство к катку ДУ-84 для изготовления водоотводного лотка из
+                    асфальтобетона по кромке дорожной одежды в Сборник ПГТУ. Проблемы проектирования, строительства и
+                    эксплуатации транспортных сооружений. Механизация строительства. Охрана окружающей среды / Материалы
+                    научно- техн. конф. автодорожного факультета / Пермь, ПГТУ, 2006. 145 с. от 26.04.2006.</li>
+                <li>Крутые горки нипочем. Стр. 67 в Газета За рулем - регион. Пермский край № 7(110) от 04.04.2006.</li>
+                <li>Пять испытаний. Стр. 68 в Газета За рулем - регион. Пермский край № 7(110) от 04.04.2006.</li>
+                <li>Пермский внедорожный клуб. Стр. 6 в Журнал АЗС. Автомобили. Запчасти. Сервис. Пермь №11(114) от
+                    23.03.2006.</li>
+                <li>ВАЗ хороший. Стр. 6 в Газета За рулем - регион. Пермский край № 6(109) от 21.03.2006.</li>
+                <li>Смена лиц. Стр. 68 в Газета За рулем - регион. Пермский край № 6(109) от 21.03.2006.</li>
+                <li>Гонки по азимуту. Стр. 55 в Газета За рулем - регион. Пермский край № 5(108) от 07.03.2006.</li>
+                <li>Зимние дебри Екатеринбурга. Стр. 56 в Газета За рулем - регион. Пермский край № 5(108) от
+                    07.03.2006.</li>
+                <li>Экспедиция-трофи 2006. Стр. 55 в Газета За рулем - регион. Пермский край № 5(108) от 07.03.2006.
+                </li>
+                <li>Старт дан! Стр. 56 в Газета За рулем - регион. Пермский край № 4(107) от 22.02.2006.</li>
+                <li>По азимуту. Стр. 55 в Газета За рулем - регион. Пермский край № 4(107) от 22.02.2006.</li>
+                <li>Ермак-2006. Стр. 44-45 в Газета За рулем - регион. Пермский край № 3(106) от 07.01.2006.</li>
+                <li>Ночью на снегоходах. Стр. 46 в Газета За рулем - регион. Пермский край № 3(106) от 07.01.2006.</li>
+                <li>Окольными путями. Стр. 55 в Газета За рулем - регион. Пермский край № 1(80) от 28.12.2005.</li>
+                <li>Итоги и награды. Стр. 43 в Газета За рулем - регион. Пермский край № 1(104) от 27.12.2005.</li>
+                <li>Ермак-2006. Стр. 45 в Газета За рулем - регион. Пермский край № 1(104) от 27.12.2005.</li>
+                <li>Два из пяти. Стр. 44 в Газета За рулем - регион. Пермский край № 1(104) от 27.12.2005.</li>
+                <li>Танцы на снегу. Стр. 44 в Газета За рулем - регион. Пермский край № 1(104) от 27.12.2005.</li>
+                <li>Раллийные гонки в Прикамье. Стр. 43 в Газета За рулем - регион. Пермский край № 2(105) от
+                    27.12.2005.</li>
+                <li>Заполярье-2006. Стр. 44 в Газета За рулем - регион. Пермский край № 2(105) от 27.12.2005.</li>
+                <li>Уральский ухаб-2005. Стр. 67 в Газета За рулем - регион. Пермский край № 22(101) от 15.11.2005.</li>
+                <li>Тропами предков. Стр. 68 в Газета За рулем - регион. Пермский край № 22(101) от 15.11.2005.</li>
+                <li>ОДА. Стр. 68 в Газета За рулем - регион. Пермский край № 21(100) от 01.11.2005.</li>
+                <li>Финальный аккород. Стр. 67 в Газета За рулем - регион. Пермский край № 19(98) от 04.10.2005.</li>
+                <li>Угонам решительное нет. Стр. 68 в Газета За рулем - регион. Пермский край № 19(98) от 04.10.2005.
+                </li>
+                <li>Когда нигде не жмет. Стр. 69 в Газета За рулем - регион. Пермский край № 18(97) от 20.09.2005.</li>
+                <li>Фотографии. Стр. 32 в Журнал Фаворит дороги №9_2005 от 15.09.2005.</li>
+                <li>Заполярье в Перми. Стр. 8 в Журнал АЗС. Автомобили. Запчасти. Сервис. Пермь №14(85) от 12.09.2005.
+                </li>
+                <li>Весёлый рейды. Стр. 69 в Газета За рулем - регион. Пермский край № 17(96) от 09.09.2005.</li>
+                <li>Картинг в массы. Стр. 57 в Газета За рулем - регион. Пермский край № 16(95) от 23.08.2005.</li>
+                <li>Триал в Перми. Стр. 57 в Газета За рулем - регион. Пермский край № 16(95) от 23.08.2005.</li>
+                <li>Август. 13-14 числа. Камская долина. Стр. 7 в Журнал АЗС. Автомобили. Запчасти. Сервис. Пермь
+                    №14(85) от 18.08.2005.</li>
+                <li>Фотографии. Стр. 4 в Журнал АЗС. Автомобили. Запчасти. Сервис. Пермь №13(84) от 11.08.2005.</li>
+                <li>Состязание моторов. Стр. 55 в Газета За рулем - регион. Пермский край № 15(94) от 09.08.2005.</li>
+                <li>В путь. Стр. 57 в Газета За рулем - регион. Пермский край № 14(93) от 26.07.2005.</li>
+                <li>Чем сложней, тем интересней. Стр. 56 в Газета За рулем - регион. Пермский край № 10(89) от
+                    31.05.2005.</li>
+                <li>Гонки по бездорожью. Стр. 41-42 в Журнал Домашний компьютер №5_2005 от 18.05.2005.</li>
+                <li>Есть варианты. Стр. 46 в Газета За рулем - регион. Пермский край № 14(70) от 17.08.2004.</li>
+                <li>Нам есть чем гордиться. Стр. 43 в Газета За рулем - регион. Пермский край № 13(69) от 22.07.2004.
+                </li>
+                <li>GPS-навигация. Мастер класс. Стр. 51-53 в Журнал Домашний компьютер №6_2004 от 17.06.2004.</li>
+                <li>Ординский ухаб-2004. Стр. 43 в Газета За рулем - регион. Пермский край № 10(66) от 08.06.2004.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2004-03-09_old-computerra-ru_GPS.pdf">Карманный картежник</a> от 09.03.2004.
+                </li>
+                <li>Карманный картежник. Стр. 50 - 51 в Компьютерный еженедельник Компьютерра №9 (533) от 09.03.2004.
+                </li>
+                <li>Фото на обложке в Журнал АЗС. Автомобили. Запчасти. Сервис. Пермь №33. ИП Кашапов А.Г. от
+                    17.12.2003.</li>
+                <li>Фото на обложке в Журнал АЗС. Автомобили. Запчасти. Сервис. Пермь №32. ИП Кашапов А.Г. от
+                    04.12.2003.</li>
+            </ol>
+            Выборка и PDF копии сайтов сгенерированы автоматически 2020-7-12 11:29:51.
+            <!-- Конец вставки из сгенерированного файла -->
+        </div>
+    </div>
+    <div class="container mt-3">
+        <!-- / Публикации -->
+        <!-- Инвестиционный опыт -->
+        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#timeline1"
+            aria-expanded="false" aria-controls="timeline1">
             Инвестиционный опыт
         </button>
     </div>
     <div class="cover-container">
         <div id="timeline1" class="temp" style="height: 380px;"></div>
+        <!-- / Инвестиционный опыт -->
     </div>
 </body>
 

@@ -232,17 +232,17 @@
 
     <script type="text/javascript">
         // Resize Timelines error 
-        var resizeId;
-        window.addEventListener('resize', function () {
-            clearTimeout(resizeId);
-            resizeId = setTimeout(doneResizing, 100);
-        })
+        // var resizeId;
+        // window.addEventListener('resize', function () {
+        //     clearTimeout(resizeId);
+        //     resizeId = setTimeout(doneResizing, 100);
+        // })
 
-        function doneResizing() {
-            $('.collapse').removeClass('collapse').addClass('temp');
-            drawChart(true);
-            drawChart2(true);
-        }
+        // function doneResizing() {
+        //     $('.collapse').removeClass('collapse').addClass('temp');
+        //     drawChart(true);
+        //     drawChart2(true);
+        // }
 
         // Calculate age
         function calcAge(dateString) {
@@ -306,7 +306,8 @@
     <div class="container mt-3">
         <!-- / Профессиональный опыт и образование -->
         <!-- Публикации -->
-        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#publications" aria-expanded="false" aria-controls="publications">
+        <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#publications"
+            aria-expanded="false" aria-controls="publications">
             Публикации
         </button>
         <div id="publications" class="collapse">

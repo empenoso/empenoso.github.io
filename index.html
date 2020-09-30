@@ -45,8 +45,12 @@
 
     <!-- Google Charts and JS -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
     <script>
         function afterDrawChart(element, resize) {
             element.removeClass('temp').addClass('collapse')
@@ -75,6 +79,7 @@
                 afterDrawChart(element, resize)
             });
 
+
             dataTable.addColumn({
                 type: 'string',
                 id: 'Заголовок'
@@ -93,7 +98,8 @@
             });
             dataTable.addRows([
                 // Начало вставки из сгенерированного файла
-                ["Публикации", "https://journal.tinkoff.ru: 4 шт.", new Date(2020, 3), new Date(2020, 08)],
+                ["Публикации", "https://www.youtube.com: 8 шт.", new Date(2020, 8), new Date(2020, 09)],
+                ["Публикации", "https://journal.tinkoff.ru: 5 шт.", new Date(2020, 3), new Date(2020, 09)],
                 ["Публикации", "https://habr.com: 21 шт.", new Date(2019, 10), new Date(2020, 08)],
                 ["Публикации", "https://github.com: 10 шт.", new Date(2019, 8), new Date(2020, 03)],
                 ["Публикации", "https://medium.com: 1 шт.", new Date(2020, 1), new Date(2020, 02)],
@@ -125,7 +131,8 @@
                 ["Публикации", "http://old.computerra.ru: 1 шт.", new Date(2004, 2), new Date(2004, 03)],
                 ["Публикации", "Компьютерный еженедельник Компьютерра: 1 шт.", new Date(2004, 2), new Date(2004,
                     03)],
-                // Выборка сгенерирована 2020-8-26 14:26:58 
+                // Выборка сгенерирована 2020-9-29 12:35:16 
+
 
                 ['Работа', 'ООО «ЦПО «Формула безопасности», образование', new Date(2019, 3), new Date()],
                 ['Работа', 'Пермский национальный исследовательский политехнический университет, образование',
@@ -301,13 +308,46 @@
         <div id="publications" class="collapse">
             <!-- Начало вставки из сгенерированного файла -->
             <ol>
+                <h5 style="margin-top: 8px;">По теме «Инвестиции»:</h5>
+                <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-09-29_journal-tinkoff-ru_Инвестиции.pdf">Куда вложить 100 000 $ на пять
+                        лет? | Т—Ж</a> от 29.09.2020.</li>
+                <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-09-16_journal-tinkoff-ru_Инвестиции.pdf">Как устроены торговые роботы? |
+                        Т—Ж</a> от 16.09.2020.</li>
+                <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-08-11_journal-tinkoff-ru_Инвестиции.pdf">Как перевести бумаги
+                        к зарубежному брокеру | Т—Ж</a> от 11.08.2020.</li>
+                <h5 style="margin-top: 8px;">По теме «Книги»:</h5>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=YrmW_3hWikw&t=2516">Видеобзор книги Биология добра и зла.
+                        Как наука объясняет наши поступки, автор: Роберт Сапольски | РБК-Пермь</a> от 22.09.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=ghT9XsB72Ps&t=2963">Видеобзор книги Деньги без дураков,
+                        автор: Александр Силаев | РБК-Пермь</a> от 17.09.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=c1S92Ks61Tc&t=2252">Видеобзор книги На этот раз все будет
+                        иначе. Авторы: Рейнхарт Кармен М., Рогофф Кеннет С. | РБК-Пермь</a> от 15.09.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=gNS6etg8aZo&t=2630">Видеобзор книги Жлобология, автор
+                        Алексей Марков | РБК-Пермь</a> от 11.09.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=YtQBTc3gg0Q&t=2212">Видеобзор книги Дурная кровь автор
+                        Джон Каррейру | РБК-Пермь</a> от 08.09.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=g03VVB_gER8&t=2919">Видеобзор книги Философия хорошей
+                        жизни, автор Рольф Добелли | РБК-Пермь</a> от 03.09.2020.</li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=W40R3fLKv-g&t=19444">Видеобзор книги "Новые правила
+                        деловой переписки" авторов Максима Ильяхова и Людмилы Сарычевой | РБК-Пермь</a> от 03.09.2020.
+                </li>
+                <li><a target="_blank" rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=yrLNoYcv7lk&t=3160">Видеобзор книги Григория Баршевского
+                        "Хочешь выжить? Инвестируй! 65 шагов от нуля до профи" | РБК-Пермь</a> от 01.09.2020.</li>
                 <h5 style="margin-top: 8px;">По теме «Гугл Таблицы»:</h5>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
                         href="./articles/2020-08-25_journal-tinkoff-ru_Гугл Таблицы.pdf">Как я слежу за акциями
                         в гугл-таблице: три простых способа | Т—Ж</a> от 25.08.2020.</li>
-                <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2020-08-17_habr-com_Гугл Таблицы.pdf">Как стать экспертом для поисковых систем
-                        | Хабр</a> от 17.08.2020.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
                         href="./articles/2020-08-05_journal-tinkoff-ru_Гугл Таблицы.pdf">Как я ищу ликвидные облигации
                         на Московской бирже | Т—Ж</a> от 05.08.2020.</li>
@@ -337,10 +377,16 @@
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
                         href="./articles/2020-02-04_habr-com_API.pdf">Что делает Free API Московской биржи в Google
                         Таблицах | Хабр</a> от 04.02.2020.</li>
-                <h5 style="margin-top: 8px;">По теме «Инвестиции»:</h5>
+                <h5 style="margin-top: 8px;">По теме «JavaScript»:</h5>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2020-08-11_journal-tinkoff-ru_Инвестиции.pdf">Как перевести бумаги
-                        к зарубежному брокеру | Т—Ж</a> от 11.08.2020.</li>
+                        href="./articles/2020-08-17_habr-com_JavaScript.pdf">Как стать экспертом для поисковых систем |
+                        Хабр</a> от 17.08.2020.</li>
+                <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-04-03_habr-com_JavaScript.pdf">Пишем генератор рандомных акций Мосбиржи на
+                        JavaScript | Хабр</a> от 03.04.2020.</li>
+                <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
+                        href="./articles/2020-03-09_github-com_JavaScript.pdf">Picks a random stock from the 200+
+                        stocks on the MOEX | GitHub </a> от 09.03.2020.</li>
                 <h5 style="margin-top: 8px;">По теме «SilverFir»:</h5>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
                         href="./articles/2020-06-22_habr-com_SilverFir.pdf">Скрипт выборки российских облигаций по
@@ -430,8 +476,8 @@
                         href="./articles/2015-02-25_z-wave-ru_Умный дом.pdf">Отслеживание присутствия людей через
                         домашний роутер | Z-Wave Russia</a> от 25.02.2015.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2015-02-11_z-wave-ru_Умный дом.pdf">Обзор контроллера домашней автоматизации
-                        VeraEdge | Z-Wave Russia</a> от 11.02.2015.</li>
+                        href="./articles/2015-02-11_z-wave-ru_Умный дом.pdf">Видеобзор контроллера домашней
+                        автоматизации VeraEdge | Z-Wave Russia</a> от 11.02.2015.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
                         href="./articles/2015-01-26_z-wave-ru_Умный дом.pdf">Практический опыт работы с Aeon Labs
                         MultiSensor | Z-Wave Russia</a> от 26.01.2015.</li>
@@ -465,19 +511,11 @@
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
                         href="./articles/2014-11-26_z-wave-ru_Умный дом.pdf">Создание домашнего кинотеатра из телевизора
                         и системы умного дома Z-Wave | Z-Wave Russia</a> от 26.11.2014.</li>
-                <h5 style="margin-top: 8px;">По теме «JavaScript»:</h5>
+                <h5 style="margin-top: 8px;">По теме «Linux»:</h5>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2020-04-03_habr-com_JavaScript.pdf">Пишем генератор рандомных акций Мосбиржи на
-                        JavaScript | Хабр</a> от 03.04.2020.</li>
-                <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2020-03-09_github-com_JavaScript.pdf">Picks a random stock from the 200+
-                        stocks on the MOEX | GitHub </a> от 09.03.2020.</li>
-                <h5 style="margin-top: 8px;">По теме «Новости»:</h5>
-                <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2020-04-02_habr-com_Новости.pdf">5G Linux смартфон в форм-факторе миниатюрного
+                        href="./articles/2020-04-02_habr-com_Linux.pdf">5G Linux смартфон в форм-факторе миниатюрного
                         ноутбука собрал средства
                         через краундфандинг | Хабр</a> от 02.04.2020.</li>
-                <h5 style="margin-top: 8px;">По теме «Linux»:</h5>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
                         href="./articles/2020-03-30_habr-com_Linux.pdf">Установка Ubuntu на Microsoft Surface Pro |
                         Хабр</a> от 30.03.2020.</li>
@@ -494,47 +532,47 @@
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
                         href="./articles/2019-03-25_t-me_Гугл скрипты.pdf">Изменяем Google Calendar с помощью скриптов |
                         Google Таблицы</a> от 25.03.2019.</li>
-                <h5 style="margin-top: 8px;">По теме «PICASO»:</h5>
+                <h5 style="margin-top: 8px;">По теме «3D-печать»:</h5>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-11-10_3dtoday-ru_PICASO.pdf">Сборная солянка на Tevo Tornado | 3Dtoday
+                        href="./articles/2018-11-10_3dtoday-ru_3D-печать.pdf">Сборная солянка на Tevo Tornado | 3Dtoday
                     </a> от 10.11.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-11-09_3dtoday-ru_PICASO.pdf">Большой кораблик на Tevo Tornado | 3Dtoday
+                        href="./articles/2018-11-09_3dtoday-ru_3D-печать.pdf">Большой кораблик на Tevo Tornado | 3Dtoday
                     </a> от 09.11.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-11-08_3dtoday-ru_PICASO.pdf">PICASO 3D: заключительный аккорд | 3Dtoday
-                    </a> от 08.11.2018.</li>
+                        href="./articles/2018-11-08_3dtoday-ru_3D-печать.pdf">3D-печать 3D: заключительный аккорд |
+                        3Dtoday </a> от 08.11.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-11-07_3dtoday-ru_PICASO.pdf">PICASO 3D: забыть как страшный сон | 3Dtoday
-                    </a> от 07.11.2018.</li>
+                        href="./articles/2018-11-07_3dtoday-ru_3D-печать.pdf">3D-печать 3D: забыть как страшный сон |
+                        3Dtoday </a> от 07.11.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-10-03_3dtoday-ru_PICASO.pdf">Мой опыт с PICASO. Суровые будни. Виню себя |
-                        3Dtoday </a> от 03.10.2018.</li>
+                        href="./articles/2018-10-03_3dtoday-ru_3D-печать.pdf">Мой опыт с 3D-печать. Суровые будни. Виню
+                        себя | 3Dtoday </a> от 03.10.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-09-29_3dtoday-ru_PICASO.pdf">Гай Юлий Цезарь. Сэкономил $30.00 | 3Dtoday
-                    </a> от 29.09.2018.</li>
+                        href="./articles/2018-09-29_3dtoday-ru_3D-печать.pdf">Гай Юлий Цезарь. Сэкономил $30.00 |
+                        3Dtoday </a> от 29.09.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-09-28_3dtoday-ru_PICASO.pdf">PICASO Designer X PRO и REC PLA | 3Dtoday
-                    </a> от 28.09.2018.</li>
+                        href="./articles/2018-09-28_3dtoday-ru_3D-печать.pdf">3D-печать Designer X PRO и REC PLA |
+                        3Dtoday </a> от 28.09.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-09-27_3dtoday-ru_PICASO.pdf">Тесты PICASO Designer X PRO после сервисного
-                        центра топ 3д шоп | 3Dtoday</a> от 27.09.2018.</li>
+                        href="./articles/2018-09-27_3dtoday-ru_3D-печать.pdf">Тесты 3D-печать Designer X PRO после
+                        сервисного центра топ 3д шоп | 3Dtoday</a> от 27.09.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-09-21_3dtoday-ru_PICASO.pdf">Это бизнес, детка! Но я просто хотел
+                        href="./articles/2018-09-21_3dtoday-ru_3D-печать.pdf">Это бизнес, детка! Но я просто хотел
                         печатать... | 3Dtoday </a> от 21.09.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-09-20_3dtoday-ru_PICASO.pdf">REC, PICASO и Top 3D Shop просто делают свою
-                        работу - как я оказался на
+                        href="./articles/2018-09-20_3dtoday-ru_3D-печать.pdf">REC, 3D-печать и Top 3D Shop просто делают
+                        свою работу - как я оказался на
                         обочине жизни | 3Dtoday </a> от 20.09.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-09-19_3dtoday-ru_PICASO.pdf">Личный опыт с PICASO Designer X PRO. Часть 3.
-                        Новый виток проблем | 3Dtoday </a> от 19.09.2018.</li>
+                        href="./articles/2018-09-19_3dtoday-ru_3D-печать.pdf">Личный опыт с 3D-печать Designer X PRO.
+                        Часть 3. Новый виток проблем | 3Dtoday </a> от 19.09.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-09-18_3dtoday-ru_PICASO.pdf">PICASO Designer X PRO сломался при первой
-                        печати | 3Dtoday </a> от 18.09.2018.</li>
+                        href="./articles/2018-09-18_3dtoday-ru_3D-печать.pdf">3D-печать Designer X PRO сломался при
+                        первой печати | 3Dtoday </a> от 18.09.2018.</li>
                 <li>М.В. Шардин. <a target="_blank" rel="noopener noreferrer"
-                        href="./articles/2018-09-16_3dtoday-ru_PICASO.pdf">Личный опыт с PICASO Designer X PRO. Часть 1.
-                        Покупка | 3Dtoday </a> от 16.09.2018.</li>
+                        href="./articles/2018-09-16_3dtoday-ru_3D-печать.pdf">Личный опыт с 3D-печать Designer X PRO.
+                        Часть 1. Покупка | 3Dtoday </a> от 16.09.2018.</li>
                 <h5 style="margin-top: 8px;">По теме «СДМ»:</h5>
                 <li>М.В. Шардин,
                     В.П. Шардин. Зависимость плотности отформованных образцов асфальтобетонной смеси от конфигурации
@@ -780,7 +818,7 @@
                 <h5 style="margin-top: 8px;">По теме «Путешествия»:</h5>
                 <li>М.В. Шардин. В путь. Стр. 57 в Газета За рулем - регион. Пермский край № 14(93) от 26.07.2005.</li>
             </ol>
-            Выборка и PDF копии сайтов сгенерированы автоматически 2020-8-26 14:26:58.
+            Выборка и PDF копии сайтов сгенерированы автоматически 2020-9-29 20:02:54.
             <!-- Конец вставки из сгенерированного файла -->
         </div>
     </div>
